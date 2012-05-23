@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is part of wnmsextract.
+ *
+ * wnmsextract is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * wnmsextract is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   NodeB Schema for wnmsextract.nz.alcatel-lucent.com
+   Copyright 2010 Alcatel-Lucent All rights reserved.
+  </xs:documentation>
+	</xs:annotation>
+	<!--
+++
+-->
+	<xs:element name="NodeB" type="NodeBType"/>
+	<!--
+++
+-->
+	<xs:complexType name="NodeBType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="timestamp" type="xs:string"/>
+			<xs:element name="NodeBEquipment" type="NodeBEquipmentType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="NodeBEquipmentType">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element name="BtsCell" type="BtsCellType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="PassiveComponent" type="PassiveComponentType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="Board" type="BoardType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="ImaGroup" type="ImaGroupType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="IpRan" type="IpRanType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:element name="VS.CEMUsedDCH.Avg" type="xs:float"/>
+		</xs:choice>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="BtsCellType">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element name="VS.CellULload.Total.Cum" type="xs:integer"/>
+				<xs:element name="VS.CellULload.Total.NbEvt" type="xs:integer"/>
+				<xs:element name="VS.CellULload.eDCH.Cum" type="xs:integer"/>
+				<xs:element name="VS.CellULload.eDCH.NbEvt" type="xs:integer"/>
+				<xs:element name="VS.RadioTxCarrierPwr.Used.Avg" type="xs:float"/>
+				<xs:element name="VS.RadioTxCarrierPwr.Oper.Max" type="xs:integer"/>
+			</xs:sequence>
+			<xs:element name="HSDPAService" type="HSDPAServiceType" maxOccurs="unbounded"/>
+			<xs:element name="HSUPAService" type="HSUPAServiceType" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+		<!--
+++
+-->
+	<xs:complexType name="PassiveComponentType">
+		<xs:sequence>
+			<xs:element name="PA" type="PAType"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+<!--
+++
+-->
+	<xs:complexType name="PAType">
+		<xs:sequence>
+			<xs:element name="VS.PAPwr.Avg" type="xs:float"/>
+			<xs:element name="VS.PAPwr.Max" type="xs:float"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="ImaGroupType">
+		<xs:sequence>
+			<xs:element name="VS.imaGroupNbReceivedCell.Avg" type="xs:float"/>
+			<xs:element name="VS.imaGroupNbSentCell.Avg" type="xs:float"/>
+			<xs:element name="VS.imaGroupNbReceivedCell.Max" type="xs:integer"/>
+			<xs:element name="VS.imaGroupNbSentCell.Max" type="xs:integer"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="IpRanType">
+		<xs:sequence>
+			<xs:element name="VS.ifOutOctets" type="xs:integer"/>
+			<xs:element name="VS.ifOutUserPlaneOctets" type="xs:integer"/>
+			<xs:element name="VS.ifInOctets" type="xs:integer"/>
+			<xs:element name="VS.ifInUserPlaneOctets" type="xs:integer"/>
+			<xs:element name="VS.ifInNUcastPkts" type="xs:integer"/>
+			<xs:element name="VS.ifInUcastPkts" type="xs:integer"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="BoardType">
+		<xs:choice>
+			<xs:element name="Ccm" type="CcmType"/>
+			<xs:element name="Cem" type="CemType"/>
+		</xs:choice>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="CcmType">
+		<xs:sequence>
+			<xs:element name="VS.cpuLoad.Max" type="xs:integer"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="CemType">
+		<xs:sequence>
+			<xs:element name="VS.cpuLoad.Max" type="xs:integer"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!--
+++
+-->
+	<xs:complexType name="HSDPAServiceType">
+		<xs:sequence>
+			<xs:element name="VS.HsdpaReceivedCQI.Level0" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level1" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level2" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level3" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level4" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level5" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level6" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level7" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level8" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level9" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level10" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level11" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level12" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level13" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level14" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level15" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level16" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level17" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level18" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level19" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level20" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level21" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level22" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level23" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level24" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level25" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level26" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level27" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level28" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level29" type="xs:integer"/>
+			<xs:element name="VS.HsdpaReceivedCQI.Level30" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTxDataBitsMAChs.Cum" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTTIsUsed" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat6" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat6" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat8" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat8" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat10" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat10" type="xs:integer"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat14" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat14" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat15" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat15" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat16" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat16" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTxDataBitPerUEcat.UEcat17" type="xs:integer" minOccurs="0"/>
+			<xs:element name="VS.HsdpaTTIperUEcat.UEcat17" type="xs:integer" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+		<!--
+++
+-->
+	<xs:complexType name="HSUPAServiceType">
+		<xs:sequence>
+			<xs:element name="VS.eDCHdataBitSentToRNC.Cum" type="xs:integer"/>
+			<xs:element name="VS.eDCHactiveUsers.2ms_users.Cum" type="xs:integer"/>
+			<xs:element name="VS.eDCHactiveUsers.10ms_users.Cum" type="xs:integer"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+</xs:schema>

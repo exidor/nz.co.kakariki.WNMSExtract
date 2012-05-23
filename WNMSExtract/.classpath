@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/inode.jar"/>
+	<classpathentry kind="lib" path="lib/nodeb.jar"/>
+	<classpathentry kind="lib" path="lib/rnccn.jar"/>
+	<classpathentry kind="lib" path="lib/sfddbts.jar"/>
+	<classpathentry kind="lib" path="lib/snodebpcm.jar"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/forms-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/looks-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/xbean.jar"/>
+	<classpathentry kind="lib" path="lib/quartz-all-1.8.0.jar" sourcepath="C:/Program Files/Java/quartz-1.8.0/quartz/src"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.5.10.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.5.10.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/xalan.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-csv-20070730.jar"/>
+	<classpathentry kind="lib" path="lib/commons-compress-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-8.2-510.jdbc3.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/htmlparser.jar"/>
+	<classpathentry kind="lib" path="lib/inodevcc.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/srncnb.jar"/>
+	<classpathentry kind="lib" path="lib/srncvcc.jar"/>
+	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

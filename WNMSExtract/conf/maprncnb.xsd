@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ * This file is part of wnmsextract.
+ * 
+ * wnmsextract is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * wnmsextract is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   RNC 2 NodeB Mapping Schema for wnmsextract.nz.alcatel-lucent.com
+   Copyright 2010 Alcatel-Lucent All rights reserved.
+		  </xs:documentation>
+	</xs:annotation>
+	<!-- 
+++ 
+-->
+	<xs:element name="MapRncNodeB" type="RncNodeBType"/>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="RncNodeBType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="Rnc" type="RncType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="RncType">
+		<xs:sequence>
+			<xs:element name="NodeB" type="NodeBType" nillable="true" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="NodeBType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+</xs:schema>

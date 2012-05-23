@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ * This file is part of wnmsextract.
+ * 
+ * wnmsextract is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * wnmsextract is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   INode Schema for wnmsextract.nz.alcatel-lucent.com
+   Copyright 2010 Alcatel-Lucent All rights reserved.
+  </xs:documentation>
+	</xs:annotation>
+	<!-- 
+++ 
+-->
+	<xs:element name="INode" type="RootINodeType"/>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="RootINodeType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="timestamp" type="xs:string"/>
+			<xs:sequence>
+				<xs:element name="RncEquipment" type="RncEquipmentType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="RncEquipmentType">
+		<xs:sequence>
+			<xs:element name="INode" type="INodeType"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="INodeType">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element name="VS.CpuUtilAvg" type="xs:float"/>
+				<xs:element name="VS.CpuUtilAvgMax" type="xs:float"/>
+				<xs:element name="VS.CpuUtilAvgMin" type="xs:float"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="AtmPort" type="AtmPortType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="Lp" type="LpType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:choice>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="AtmPortType">
+		<xs:sequence>
+			<xs:element name="VS.RxMaxCellRate" type="xs:integer"/>
+			<xs:element name="VS.TxMaxCellRate" type="xs:integer"/>
+			<xs:element name="VS.RxAvgCellRate" type="xs:float"/>
+			<xs:element name="VS.TxAvgCellRate" type="xs:float"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="LpType">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element name="VS.CpuUtilAvg" type="xs:float"/>
+				<xs:element name="VS.CpuUtilAvgMax" type="xs:float"/>
+				<xs:element name="VS.CpuUtilAvgMin" type="xs:float"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="Ap" type="ApType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="Ethernet" type="EthernetType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:choice>
+		<xs:attribute name="id" type="xs:int"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="ApType">
+		<xs:sequence>
+			<xs:element name="VS.APCpuUtilizationAvg" type="xs:float"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="EthernetType">
+		<xs:sequence>
+			<xs:element name="VS.avgRxUtilization" type="xs:float"/>
+			<xs:element name="VS.avgTxUtilization" type="xs:float"/>
+			<xs:element name="VS.maxRxUtilization" type="xs:float"/>
+			<xs:element name="VS.maxTxUtilization" type="xs:float"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+</xs:schema>

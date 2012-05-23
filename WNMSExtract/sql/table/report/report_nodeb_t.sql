@@ -1,0 +1,20 @@
+create table report_nodeb_t (
+id varchar(8),
+speech_ccmxa double precision,
+speech_cemxa double precision,
+speech_imagda double precision,
+speech_imagua double precision,
+data_ccmxa double precision,
+data_cemxa double precision,
+data_imagda double precision,
+data_imagua double precision,
+combined_ccmxa double precision,
+combined_cemxa double precision,
+combined_imagda double precision,
+combined_imagua double precision,
+attempts_ccmxa double precision,
+attempts_cemxa double precision,
+attempts_imagda double precision,
+attempts_imagua double precision,
+constraint report_nodeb_t_pk primary key (id)
+);

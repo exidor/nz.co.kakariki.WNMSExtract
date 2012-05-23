@@ -1,0 +1,1136 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>JDepend Analysis</title>
+<style type="text/css">
+      body {
+        font:normal 68% verdana,arial,helvetica;
+        color:#000000;
+      }
+      table tr td, tr th {
+          font-size: 68%;
+      }
+      table.details tr th{
+        font-weight: bold;
+        text-align:left;
+        background:#a6caf0;
+      }
+      table.details tr td{
+        background:#eeeee0;
+      }
+      
+      p {
+        line-height:1.5em;
+        margin-top:0.5em; margin-bottom:1.0em;
+        margin-left:2em;
+        margin-right:2em;
+      }
+      h1 {
+        margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+      }
+      h2 {
+        margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+      }
+      h3 {
+        margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+      }
+      h4 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      h5 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      h6 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      .Error {
+        font-weight:bold; color:red;
+      }
+      .Failure {
+        font-weight:bold; color:purple;
+      }
+      .Properties {
+        text-align:right;
+      }
+      </style>
+</head>
+<body>
+<h1>
+<a name="top">JDepend Analysis</a>
+</h1>
+<p align="right">Designed for use with <a href="http://www.clarkware.com/software/JDepend.html">JDepend</a> and <a href="http://jakarta.apache.org">Ant</a>.</p>
+<hr size="2">
+<table width="100%">
+<tr>
+<td><a name="NVsummary">
+<h2>Summary</h2>
+</a></td><td align="right">
+    [<a href="#NVsummary">summary</a>]
+    [<a href="#NVpackages">packages</a>]
+    [<a href="#NVcycles">cycles</a>]
+    [<a href="#NVexplanations">explanations</a>]
+    </td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Package</th><th>Total Classes</th><th><a href="#EXnumber">Abstract Classes</a></th><th><a href="#EXnumber">Concrete Classes</a></th><th><a href="#EXafferent">Afferent Couplings</a></th><th><a href="#EXefferent">Efferent Couplings</a></th><th><a href="#EXabstractness">Abstractness</a></th><th><a href="#EXinstability">Instability</a></th><th><a href="#EXdistance">Distance</a></th>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a></td><td align="right">9</td><td align="right">0</td><td align="right">9</td><td align="right">2</td><td align="right">11</td><td align="right">0</td><td align="right">0.85</td><td align="right">0.15</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a></td><td align="right">20</td><td align="right">2</td><td align="right">18</td><td align="right">13</td><td align="right">2</td><td align="right">0.1</td><td align="right">0.13</td><td align="right">0.77</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.inode">com.alcatel_lucent.nz.wnmsextract.database.inode</a></td><td align="right">6</td><td align="right">0</td><td align="right">6</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.inodevcc">com.alcatel_lucent.nz.wnmsextract.database.inodevcc</a></td><td align="right">4</td><td align="right">0</td><td align="right">4</td><td align="right">1</td><td align="right">4</td><td align="right">0</td><td align="right">0.8</td><td align="right">0.2</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.nodeb">com.alcatel_lucent.nz.wnmsextract.database.nodeb</a></td><td align="right">11</td><td align="right">0</td><td align="right">11</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.rnccn">com.alcatel_lucent.nz.wnmsextract.database.rnccn</a></td><td align="right">3</td><td align="right">0</td><td align="right">3</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.fddbts">com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts</a></td><td align="right">2</td><td align="right">0</td><td align="right">2</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.nodeb">com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb</a></td><td align="right">2</td><td align="right">0</td><td align="right">2</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.pcm">com.alcatel_lucent.nz.wnmsextract.database.wips.pcm</a></td><td align="right">1</td><td align="right">0</td><td align="right">1</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.vcc">com.alcatel_lucent.nz.wnmsextract.database.wips.vcc</a></td><td align="right">3</td><td align="right">0</td><td align="right">3</td><td align="right">1</td><td align="right">5</td><td align="right">0</td><td align="right">0.83</td><td align="right">0.17</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a></td><td align="right">17</td><td align="right">1</td><td align="right">16</td><td align="right">4</td><td align="right">21</td><td align="right">0.06</td><td align="right">0.84</td><td align="right">0.1</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.parser">com.alcatel_lucent.nz.wnmsextract.parser</a></td><td align="right">9</td><td align="right">1</td><td align="right">8</td><td align="right">3</td><td align="right">2</td><td align="right">0.11</td><td align="right">0.4</td><td align="right">0.49</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a></td><td align="right">28</td><td align="right">3</td><td align="right">25</td><td align="right">3</td><td align="right">19</td><td align="right">0.11</td><td align="right">0.86</td><td align="right">0.03</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.schedule">com.alcatel_lucent.nz.wnmsextract.schedule</a></td><td align="right">8</td><td align="right">0</td><td align="right">8</td><td align="right">1</td><td align="right">6</td><td align="right">0</td><td align="right">0.86</td><td align="right">0.14</td>
+</tr>
+<tr>
+<td align="left"><a href="#PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a></td><td align="right">18</td><td align="right">0</td><td align="right">18</td><td align="right">0</td><td align="right">8</td><td align="right">0</td><td align="right">1</td><td align="right">0</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.jgoodies.forms.builder</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">com.jgoodies.forms.layout</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">junit.framework</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">junit.textui</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.commons.cli</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.commons.compress.archivers.tar</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.commons.compress.archivers.zip</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.commons.compress.compressors.gzip</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.commons.csv</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.commons.io</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.http</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.http.auth</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.http.client</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.http.client.methods</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.http.conn</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.http.impl.client</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.log4j</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.log4j.net</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.xmlbeans</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.apache.xmlbeans.impl.values</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.htmlparser</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.htmlparser.filters</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.htmlparser.tags</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.htmlparser.util</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.quartz</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.quartz.impl</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.w3c.dom</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+<tr>
+<td align="left">org.xml.sax</td><td align="left" colspan="8">No stats available: package referenced, but not analyzed.</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><a name="NVpackages">
+<h2>Packages</h2>
+</a></td><td align="right">
+    [<a href="#NVsummary">summary</a>]
+    [<a href="#NVpackages">packages</a>]
+    [<a href="#NVcycles">cycles</a>]
+    [<a href="#NVexplanations">explanations</a>]
+    </td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 2</td><td><a href="#EXefferent">Efferent Couplings</a>: 11</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.85</td><td><a href="#EXdistance">Distance</a>: 0.15</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.DataLogger
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.DataLogger$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.DataLogger$LogAppType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.WNMSDataExtractor
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.WNMSDataScheduler
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransform
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransformGUI
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransformGUI$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransformGUI$2
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.parser">com.alcatel_lucent.nz.wnmsextract.parser</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.schedule">com.alcatel_lucent.nz.wnmsextract.schedule</a>
+<br>
+<a href="#PKcom.jgoodies.forms.builder">com.jgoodies.forms.builder</a>
+<br>
+<a href="#PKcom.jgoodies.forms.layout">com.jgoodies.forms.layout</a>
+<br>
+<a href="#PKorg.apache.commons.cli">org.apache.commons.cli</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.log4j.net">org.apache.log4j.net</a>
+<br>
+<a href="#PKorg.quartz">org.quartz</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 13</td><td><a href="#EXefferent">Efferent Couplings</a>: 2</td><td><a href="#EXabstractness">Abstractness</a>: 0.1</td><td><a href="#EXinstability">Instability</a>: 0.13</td><td><a href="#EXdistance">Distance</a>: 0.77</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUJDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUTable
+                <br>
+</td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUConnectionDefinitions
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUDBUtilities
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUDBUtilities$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUDBUtilities$ColumnStructure
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUJDCConnectorFactory
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUJDCConnectorFactory$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.ConnectionReaper
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.DatabaseType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.GTANZRSDBJDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.JDCConnection
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.JDCConnectionDriver
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.JDCConnectionPool
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.MPMJDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.NPO33JDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.NPO48JDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.NZRSDBJDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.TNZNZRSDBJDCConnector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.TestJDCConnector
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.inode">com.alcatel_lucent.nz.wnmsextract.database.inode</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.inodevcc">com.alcatel_lucent.nz.wnmsextract.database.inodevcc</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.nodeb">com.alcatel_lucent.nz.wnmsextract.database.nodeb</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.rnccn">com.alcatel_lucent.nz.wnmsextract.database.rnccn</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.fddbts">com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.nodeb">com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.pcm">com.alcatel_lucent.nz.wnmsextract.database.wips.pcm</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.vcc">com.alcatel_lucent.nz.wnmsextract.database.wips.vcc</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.schedule">com.alcatel_lucent.nz.wnmsextract.schedule</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.inode">com.alcatel_lucent.nz.wnmsextract.database.inode</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUApTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUAtmPortTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUEthernetTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUINodeTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALULpTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALURncEquipmentTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.inodevcc">com.alcatel_lucent.nz.wnmsextract.database.inodevcc</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 4</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.8</td><td><a href="#EXdistance">Distance</a>: 0.2</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALUAtmPortTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALUINodeTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALURncEquipmentTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALUVccTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.nodeb">com.alcatel_lucent.nz.wnmsextract.database.nodeb</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUBoardTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUBtsCellTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUCcmTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUCemTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUHSDPAServiceTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUHSUPAServiceTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUImaGroupTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUIpRanTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUNodeBEquipmentTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUPATable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUPassiveComponentTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.rnccn">com.alcatel_lucent.nz.wnmsextract.database.rnccn</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.rnccn.ALUNeighbouringRncTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.rnccn.ALURncFunctionTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.rnccn.ALUUtranCellTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.wips.fddbts">com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts.SNAPBTSEquipmentTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts.SNAPFddBtsTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.wips.nodeb">com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb.SNAPRncNodeBTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb.SNAPRncTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.wips.pcm">com.alcatel_lucent.nz.wnmsextract.database.wips.pcm</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.pcm.SNAPNodeBPCMTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.database.wips.vcc">com.alcatel_lucent.nz.wnmsextract.database.wips.vcc</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 5</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.83</td><td><a href="#EXdistance">Distance</a>: 0.17</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.vcc.SNAPAtmIfTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.vcc.SNAPRncTable
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.vcc.SNAPRncVccTable
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.apache.xmlbeans.impl.values">org.apache.xmlbeans.impl.values</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 4</td><td><a href="#EXefferent">Efferent Couplings</a>: 21</td><td><a href="#EXabstractness">Abstractness</a>: 0.06</td><td><a href="#EXinstability">Instability</a>: 0.84</td><td><a href="#EXdistance">Distance</a>: 0.1</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUDocument
+                <br>
+</td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUDocumentFactory
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUDocumentFactory$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUFileFilter
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.DocumentType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.NetworkType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.ReaderType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.TransformerType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSCountNodeBPCMDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapFddBtsDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapRANNetworkTransformer
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapRncNodeBDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapRncVccDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSINodeDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSINodeVccDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSNodeBDocument
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSRncCnDocument
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.schedule">com.alcatel_lucent.nz.wnmsextract.schedule</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.inode">com.alcatel_lucent.nz.wnmsextract.database.inode</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.inodevcc">com.alcatel_lucent.nz.wnmsextract.database.inodevcc</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.nodeb">com.alcatel_lucent.nz.wnmsextract.database.nodeb</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.rnccn">com.alcatel_lucent.nz.wnmsextract.database.rnccn</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.fddbts">com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.nodeb">com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.pcm">com.alcatel_lucent.nz.wnmsextract.database.wips.pcm</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database.wips.vcc">com.alcatel_lucent.nz.wnmsextract.database.wips.vcc</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.parser">com.alcatel_lucent.nz.wnmsextract.parser</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn">com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.apache.xmlbeans">org.apache.xmlbeans</a>
+<br>
+<a href="#PKorg.xml.sax">org.xml.sax</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.parser">com.alcatel_lucent.nz.wnmsextract.parser</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 3</td><td><a href="#EXefferent">Efferent Couplings</a>: 2</td><td><a href="#EXabstractness">Abstractness</a>: 0.11</td><td><a href="#EXinstability">Instability</a>: 0.4</td><td><a href="#EXdistance">Distance</a>: 0.49</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParser
+                <br>
+</td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParserFactory
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParserFactory$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParserFactory$PType
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.BORGParser
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.BORGParser$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.WIPSParser
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.WNMSParser
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.parser.WNMSParser$1
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKorg.w3c.dom">org.w3c.dom</a>
+<br>
+<a href="#PKorg.xml.sax">org.xml.sax</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 3</td><td><a href="#EXefferent">Efferent Couplings</a>: 19</td><td><a href="#EXabstractness">Abstractness</a>: 0.11</td><td><a href="#EXinstability">Instability</a>: 0.86</td><td><a href="#EXdistance">Distance</a>: 0.03</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.reader.FileSelector
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.HttpReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.LogWriter
+                <br>
+</td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader$AppProc
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader$RncAp
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader$AppProc
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader$RncAp
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgSelectionReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.CSVReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.CSVReader$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.Extractor
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.Extractor$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorCPV
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorGTAZIP
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorTAR
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorTNZCPV
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorTNZTAR
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.FileProcessor
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.FileUtilities
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.GTAHttpReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.SSLReaderUtilities
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.SSLReaderUtilities$1
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.TNZArchiveReader
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.reader.TNZArchiveReader$1
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.schedule">com.alcatel_lucent.nz.wnmsextract.schedule</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+<a href="#PKorg.apache.commons.compress.archivers.tar">org.apache.commons.compress.archivers.tar</a>
+<br>
+<a href="#PKorg.apache.commons.compress.archivers.zip">org.apache.commons.compress.archivers.zip</a>
+<br>
+<a href="#PKorg.apache.commons.compress.compressors.gzip">org.apache.commons.compress.compressors.gzip</a>
+<br>
+<a href="#PKorg.apache.commons.csv">org.apache.commons.csv</a>
+<br>
+<a href="#PKorg.apache.commons.io">org.apache.commons.io</a>
+<br>
+<a href="#PKorg.apache.http">org.apache.http</a>
+<br>
+<a href="#PKorg.apache.http.auth">org.apache.http.auth</a>
+<br>
+<a href="#PKorg.apache.http.client">org.apache.http.client</a>
+<br>
+<a href="#PKorg.apache.http.client.methods">org.apache.http.client.methods</a>
+<br>
+<a href="#PKorg.apache.http.conn">org.apache.http.conn</a>
+<br>
+<a href="#PKorg.apache.http.impl.client">org.apache.http.impl.client</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.htmlparser">org.htmlparser</a>
+<br>
+<a href="#PKorg.htmlparser.filters">org.htmlparser.filters</a>
+<br>
+<a href="#PKorg.htmlparser.tags">org.htmlparser.tags</a>
+<br>
+<a href="#PKorg.htmlparser.util">org.htmlparser.util</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmsextract.schedule">com.alcatel_lucent.nz.wnmsextract.schedule</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 1</td><td><a href="#EXefferent">Efferent Couplings</a>: 6</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 0.86</td><td><a href="#EXdistance">Distance</a>: 0.14</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConfigPoller
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConfigProperties
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConfigProperties$Prefix
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionJob
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionJobFactory
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionJobScheduler
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionListener
+                <br>
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ExecutableJob
+                <br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+</td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+<a href="#PKorg.quartz">org.quartz</a>
+<br>
+<a href="#PKorg.quartz.impl">org.quartz.impl</a>
+<br>
+</td>
+</tr>
+</table>
+<h3>
+<a name="PKcom.alcatel_lucent.nz.wnmstest">com.alcatel_lucent.nz.wnmstest</a>
+</h3>
+<table width="100%">
+<tr>
+<td><a href="#EXafferent">Afferent Couplings</a>: 0</td><td><a href="#EXefferent">Efferent Couplings</a>: 8</td><td><a href="#EXabstractness">Abstractness</a>: 0</td><td><a href="#EXinstability">Instability</a>: 1</td><td><a href="#EXdistance">Distance</a>: 0</td>
+</tr>
+</table>
+<table width="100%" class="details">
+<tr>
+<th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th>
+</tr>
+<tr>
+<td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%">
+                    com.alcatel_lucent.nz.wnmstest.TestCopyINode
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestCopyNodeB
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestCopyRncCn
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestDBUtilities
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestFileProcess_Extract
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestFileUtilities_Extract
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestFileUtilities_Select
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseCountNodeBPCM
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseINode
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseMapFddBts
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseMapRncNodeB
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseMapRncVcc
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseNodeB
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestParseRncCn
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestSecureConnect
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestStandaloneXSLParse
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.TestSuiteParse
+                <br>
+                    com.alcatel_lucent.nz.wnmstest.Test_StandaloneXSLParse
+                <br>
+</td><td valign="top" width="25%"><i>None</i></td><td valign="top" width="25%"><a href="#PKcom.alcatel_lucent.nz.wnmsextract">com.alcatel_lucent.nz.wnmsextract</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.database">com.alcatel_lucent.nz.wnmsextract.database</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.document">com.alcatel_lucent.nz.wnmsextract.document</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.parser">com.alcatel_lucent.nz.wnmsextract.parser</a>
+<br>
+<a href="#PKcom.alcatel_lucent.nz.wnmsextract.reader">com.alcatel_lucent.nz.wnmsextract.reader</a>
+<br>
+<a href="#PKjunit.framework">junit.framework</a>
+<br>
+<a href="#PKjunit.textui">junit.textui</a>
+<br>
+<a href="#PKorg.apache.log4j">org.apache.log4j</a>
+<br>
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td><a name="NVcycles">
+<h2>Cycles</h2>
+</a></td><td align="right">
+    [<a href="#NVsummary">summary</a>]
+    [<a href="#NVpackages">packages</a>]
+    [<a href="#NVcycles">cycles</a>]
+    [<a href="#NVexplanations">explanations</a>]
+    </td>
+</tr>
+</table>
+<h3>com.alcatel_lucent.nz.wnmsextract</h3>
+<p>com.alcatel_lucent.nz.wnmsextract.reader<br>com.alcatel_lucent.nz.wnmsextract<br>
+</p>
+<h3>com.alcatel_lucent.nz.wnmsextract.reader</h3>
+<p>com.alcatel_lucent.nz.wnmsextract<br>com.alcatel_lucent.nz.wnmsextract.reader<br>
+</p>
+<h3>com.alcatel_lucent.nz.wnmsextract.schedule</h3>
+<p>com.alcatel_lucent.nz.wnmsextract.reader<br>com.alcatel_lucent.nz.wnmsextract<br>com.alcatel_lucent.nz.wnmsextract.reader<br>
+</p>
+<h3>com.alcatel_lucent.nz.wnmstest</h3>
+<p>com.alcatel_lucent.nz.wnmsextract.reader<br>com.alcatel_lucent.nz.wnmsextract<br>com.alcatel_lucent.nz.wnmsextract.reader<br>
+</p>
+<table width="100%">
+<tr>
+<td><a name="NVexplanations">
+<h2>Explanations</h2>
+</a></td><td align="right">
+    [<a href="#NVsummary">summary</a>]
+    [<a href="#NVpackages">packages</a>]
+    [<a href="#NVcycles">cycles</a>]
+    [<a href="#NVexplanations">explanations</a>]
+    </td>
+</tr>
+</table>
+<p>The following explanations are for quick reference and are lifted directly from the original <a href="http://www.clarkware.com/software/JDepend.html">JDepend documentation</a>.</p>
+<h3>
+<a name="EXnumber">Number of Classes</a>
+</h3>
+<p>The number of concrete and abstract classes (and interfaces) in the package is an indicator of the extensibility of the package.</p>
+<h3>
+<a name="EXafferent">Afferent Couplings</a>
+</h3>
+<p>The number of other packages that depend upon classes within the package is an indicator of the package's responsibility. </p>
+<h3>
+<a name="EXefferent">Efferent Couplings</a>
+</h3>
+<p>The number of other packages that the classes in the package depend upon is an indicator of the package's independence. </p>
+<h3>
+<a name="EXabstractness">Abstractness</a>
+</h3>
+<p>The ratio of the number of abstract classes (and interfaces) in the analyzed package to the total number of classes in the analyzed package. </p>
+<p>The range for this metric is 0 to 1, with A=0 indicating a completely concrete package and A=1 indicating a completely abstract package. </p>
+<h3>
+<a name="EXinstability">Instability</a>
+</h3>
+<p>The ratio of efferent coupling (Ce) to total coupling (Ce / (Ce + Ca)). This metric is an indicator of the package's resilience to change. </p>
+<p>The range for this metric is 0 to 1, with I=0 indicating a completely stable package and I=1 indicating a completely instable package. </p>
+<h3>
+<a name="EXdistance">Distance</a>
+</h3>
+<p>The perpendicular distance of a package from the idealized line A + I = 1. This metric is an indicator of the package's balance between abstractness and stability. </p>
+<p>A package squarely on the main sequence is optimally balanced with respect to its abstractness and stability. Ideal packages are either completely abstract and stable (x=0, y=1) or completely concrete and instable (x=1, y=0). </p>
+<p>The range for this metric is 0 to 1, with D=0 indicating a package that is coincident with the main sequence and D=1 indicating a package that is as far from the main sequence as possible. </p>
+</body>
+</html>

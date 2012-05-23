@@ -1,0 +1,20 @@
+create table report_rnc_t (
+id varchar(8),
+speech_acchspaa double precision,
+speech_rethspaa double precision,
+speech_accvoicea double precision,
+speech_retvoicea double precision,
+data_acchspaa double precision,
+data_rethspaa double precision,
+data_accvoicea double precision,
+data_retvoicea double precision,
+combined_acchspaa double precision,
+combined_rethspaa double precision,
+combined_accvoicea double precision,
+combined_retvoicea double precision,
+attempts_acchspaa double precision,
+attempts_rethspaa double precision,
+attempts_accvoicea double precision,
+attempts_retvoicea double precision,
+constraint report_rnc_t_pk primary key (id)
+);

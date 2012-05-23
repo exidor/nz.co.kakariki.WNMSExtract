@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="WNMSExtract" default="build" basedir=".">
+	<description>
+		WNMS Extract
+ 	</description>
+
+	<!--
+
+		Targets =======
+		init : Initialises, builds dirs and does tstamp
+		build : Compiles base clases
+		pack : Builds a Jar archive
+		docs : Creates Javadoc API docs
+		run : Runs Jar archive as an executable
+		backup : Saves critical src and doc to backup
+		clean : Cleans base classes
+
+		test.run : Run test cases
+		test.junit : Tests for existence of JUnit
+		test.build : Build test classes
+		test.report : Generates test run report
+		test.clean : Cleans test classes
+	-->
+
+	<!-- ========== -->
+	<!-- PROPERTIES -->
+	<!-- ========== -->
+
+	<property file="build.properties" />
+	<property file="app.properties" />
+
+	<property name="base.dir" value="." />
+	<property name="src.dir" value="${base.dir}/src" />
+	<property name="build.dir" value="${base.dir}/build" />
+	<property name="test.dir" value="${base.dir}/test" />
+	<property name="dist.dir" value="${base.dir}/dist" />
+	<property name="lib.dir" value="${base.dir}/lib" />
+	<property name="sql.dir" value="${base.dir}/sql" />
+	<property name="conf.dir" value="${base.dir}/conf" />
+	<property name="report.dir" value="${base.dir}/report" />
+	<property name="docs.dir" value="${base.dir}/doc" />
+	<property name="backup.dir" value="${base.dir}/backup" />
+	<property name="deploy.dir" value="f:\archive\" />
+
+	<property name="verb" value="false" />
+
+	<path id="path.java" path="/opt/java/bin" />
+	<path id="path.junit" path="${path.java}/junit4.0/junit-4.0.jar" />
+	<path id="path.postgres" path="${lib.dir}/postgresql-8.0-315.jdbc3.jar" />
+	<path id="path.dist">
+		<fileset dir="${lib.dir}" includes="**/*.jar, **/*.zip" />
+	</path>
+
+
+
+
+	<!--
+  <splash imageurl="./lucent_logo.gif" showduration="5000"/>
+  -->
+
+	<!-- ========= -->
+	<!-- CLASSPATH -->
+	<!-- ========= -->
+
+	<path id="classpath.base">
+		<pathelement location="${base.dir}" />
+	</path>
+
+	<path id="classpath.test">
+		<pathelement path="${classpath.base}" />
+		<pathelement path="${path.junit}" />
+		<pathelement location="${build.dir}" />
+	</path>
+
+	<path id="classpath.run">
+		<pathelement path="${classpath.base}" />
+		<pathelement location="${build.dir}" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath.manifest">
+		<pathelement path="${classpath.base}" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${conf.dir}">
+			<include name="**/*.xsl" />
+		</fileset>
+	</path>
+
+	<manifestclasspath property="classpath.manifest.path"
+		jarfile="${dist.dir}/${proj.pack}">
+		<classpath refid="classpath.manifest" />
+	</manifestclasspath>
+
+
+	<!-- =========================== -->
+	<!--           TARGETS           -->
+	<!-- =========================== -->
+
+	<!-- ==== -->
+	<!-- INIT -->
+	<!-- ==== -->
+
+	<target name="init" description="Initialise build environment">
+		<!-- Create the build directory structure -->
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${test.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${lib.dir}" />
+		<mkdir dir="${conf.dir}" />
+		<mkdir dir="${report.dir}" />
+		<mkdir dir="${docs.dir}" />
+		<mkdir dir="${backup.dir}" />
+		<tstamp />
+	</target>
+
+	<!-- ====== -->
+	<!-- DEPEND -->
+	<!-- ====== -->
+	<target name="depend" depends="init">
+
+	  <jdepend format="xml" outputfile="${docs.dir}/jdepend-report.xml">
+	      <exclude name="java.*"/>
+	      <exclude name="javax.*"/>
+	      <classespath>
+	        <pathelement location="${build.dir}" />
+	      </classespath>
+	      <classpath location="${build.dir}" />
+	  </jdepend>
+
+	  <xslt basedir="doc" destdir="doc"
+	         includes="jdepend-report.xml"
+	         style="${ant.home}/etc/jdepend.xsl" />
+
+	</target>
+
+	<!-- ===== -->
+	<!-- BUILD -->
+	<!-- ===== -->
+	<!--<target name="build" depends="depend" description="Build primary classes">-->
+	<target name="build" depends="init" description="Build primary classes">
+		<!-- run javac to compile the source files -->
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+			<classpath refid="classpath.run" />
+		</javac>
+	</target>
+
+	<!-- ==== -->
+	<!-- TEST -->
+	<!-- ==== -->
+
+	<target name="test" depends="test.run" description="test.run alias" />
+
+	<target name="test.junit" description="Test for JUnit in classpath">
+		<available property="junit.present" classname="junit.framework.TestCase" />
+	</target>
+
+	<target name="test.build" depends="test.junit, build"
+		description="Builds the Test classes">
+		<!-- run javac to compile the test source files -->
+		<javac srcdir="${test.dir}" destdir="${build.dir}" verbose="${verb}">
+			<classpath refid="classpath.test" />
+		</javac>
+	</target>
+
+	<target name="test.clean" depends="backup" description="Cleans the test classes">
+		<delete verbose="${verb}">
+			<fileset dir="${build.dir}" includes="**/*_Test.class" />
+			<fileset dir="${base.dir}" includes="TEST-*.xml" />
+		</delete>
+	</target>
+
+	<target name="test.run" depends="test.build" description="Runs the test suite">
+		<junit printsummary="yes" fork="yes" haltonfailure="no">
+			<classpath refid="classpath.test" />
+			<formatter type="xml" />
+			<batchtest>
+				<fileset dir="${build.dir}">
+					<include name="**/*_Test*" />
+				</fileset>
+			</batchtest>
+			<!--<test name="Cost.CEMain_Test"/>-->
+		</junit>
+	</target>
+
+	<!-- ====== -->
+	<!-- REPORT -->
+	<!-- ====== -->
+
+	<target name="report" depends="test.run"
+		description="Generates Success/Failure report on test suite">
+		<junitreport todir="${report.dir}">
+			<fileset dir=".">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${report.dir}" />
+		</junitreport>
+	</target>
+
+	<!-- ======= -->
+	<!-- PACKAGE -->
+	<!-- ======= -->
+
+	<target name="pack" depends="pack.extractor, pack.scheduler" />
+
+	<target name="pack.scheduler" depends="build"
+		description="Packages WNMSDataScheduler into JAR archive">
+		<jar destfile="${dist.dir}/${proj.pack.schedule}" compress="true">
+			<manifest>
+				<attribute name="Main-Class"
+					value="com.alcatel_lucent.nz.wnmsextract.WNMSDataScheduler" />
+				<attribute name="Class-Path" value="${classpath.manifest.path}" />
+				<attribute name="Built-By" value="${dev.name}" />
+				<attribute name="Implementation-Vendor" value="${proj.comp}" />
+				<attribute name="Implementation-Title" value="${proj.name}" />
+				<attribute name="Implementation-Version" value="${proj.ver}" />
+				<section name="common/MyClass.class">
+					<attribute name="Sealed" value="false" />
+				</section>
+			</manifest>
+			<include name="build" />
+			<fileset dir="${build.dir}">
+				<exclude name="**/wnmstest/*" />
+			</fileset>
+			<zipfileset dir="${conf.dir}" prefix="conf">
+				<include name="*.xsl" />
+				<include name="*.properties" />
+			</zipfileset>
+			<zipfileset dir="${lib.dir}" prefix="lib">
+				<include name="*.jar" />
+			</zipfileset>
+		</jar>
+	</target>
+
+	<target name="pack.extractor" depends="build"
+		description="Packages WNMSDataExtractor into JAR archive">
+		<jar destfile="${dist.dir}/${proj.pack.extract}" compress="true">
+			<manifest>
+				<attribute name="Main-Class"
+					value="com.alcatel_lucent.nz.wnmsextract.WNMSDataExtractor" />
+				<attribute name="Class-Path" value="${classpath.manifest.path}" />
+				<attribute name="Built-By" value="${dev.name}" />
+				<attribute name="Implementation-Vendor" value="${proj.comp}" />
+				<attribute name="Implementation-Title" value="${proj.name}" />
+				<attribute name="Implementation-Version" value="${proj.ver}" />
+				<section name="common/MyClass.class">
+					<attribute name="Sealed" value="false" />
+				</section>
+			</manifest>
+			<include name="build" />
+			<fileset dir="${build.dir}">
+				<exclude name="**/wnmstest/*" />
+			</fileset>
+			<zipfileset dir="${conf.dir}" prefix="conf">
+				<include name="*.xsl" />
+			</zipfileset>
+			<zipfileset dir="${lib.dir}" prefix="lib">
+				<include name="*.jar" />
+			</zipfileset>
+		</jar>
+	</target>
+
+	<!-- ====== -->
+	<!-- DEPLOY -->
+	<!-- ====== -->
+
+	<target name="deploy" depends="pack" description="Copies JAR to shared directory">
+		<echo message="Deploying to ${deploy.dir} [\\jnramsay-c1\archive]" />
+		<copy file="${dist.dir}/${proj.pack.schedule}" todir="${deploy.dir}" />
+		<copy file="${dist.dir}/${proj.pack.extract}" todir="${deploy.dir}" />
+	</target>
+
+	<!-- ==== -->
+	<!-- DOCS -->
+	<!-- ==== -->
+
+	<target name="docs" depends="build, depend">
+		<!-- create javadocs -->
+		<javadoc packagenames="com.alcatel_lucent.nz.wnmsextract.*"
+			sourcepath="${src.dir}" defaultexcludes="yes" destdir="${docs.dir}"
+			author="true" version="true" use="true"
+			windowtitle="WNMSExtract Tool API Documentation Version: ${version}" />
+
+	</target>
+
+	<!-- ======= -->
+	<!-- RUN/USE -->
+	<!-- ======= -->
+
+	<target name="run" depends="pack">
+		<!-- run the class -->
+		<java jar="${dist.dir}/${proj.pack}" fork="true">
+			<classpath refid="classpath.run" />
+			<arg value="${proj.args}" />
+		</java>
+	</target>
+
+	<!-- ====== -->
+	<!-- BACKUP -->
+	<!-- ====== -->
+
+	<target name="backup" description="Save locations/files you may need later">
+		<echo message="Backing Up to ${backup.dir}" />
+		<copy todir="${backup.dir}">
+			<fileset dir="${src.dir}" />
+			<fileset dir="${sql.dir}" />
+			<fileset dir="${conf.dir}" />
+			<fileset dir="${docs.dir}">
+				<exclude name="**/*.htm*" />
+			</fileset>
+			<!-- <globmapper from="*" to="*.bak"/> -->
+		</copy>
+	</target>
+
+	<!-- ===== -->
+	<!-- CLEAN -->
+	<!-- ===== -->
+
+	<target name="clean" depends="backup, test.clean">
+		<echo message="Cleaning; build, lib, .html from docs and .java~ from src" />
+		<!-- Delete the ${build} and ${lib} directory trees -->
+		<delete dir="${build.dir}/*" />
+		<delete dir="${dist.dir}/*" />
+		<!-- <delete dir="${report.dir}/*" /> -->
+		<delete>
+			<fileset dir="${docs.dir}" includes="**/*.html" />
+			<!--
+				<fileset dir="${src.dir}" includes="**/*" excludes="**/*.java"/>
+			-->
+		</delete>
+	</target>
+
+	<!-- ========= -->
+	<!-- LISTPROPS -->
+	<!-- ========= -->
+
+	<target name="list" description="Display the Application properties">
+		<echo message="Project Information" />
+		<echo message="-------------------" />
+		<echo message="proj.name    : ${proj.name}" />
+		<echo message="proj.pkg     : ${proj.pkg}" />
+		<echo message="proj.main    : ${proj.main}" />
+		<echo message="proj.args    : ${proj.args}" />
+		<echo message="proj.pack    : ${proj.pack}" />
+		<echo message="proj.version : ${proj.version}" />
+		<echo message="" />
+		<echo message="dev.name     : ${dev.name}" />
+		<echo message="dev.email    : ${dev.email}" />
+	</target>
+
+</project>
+

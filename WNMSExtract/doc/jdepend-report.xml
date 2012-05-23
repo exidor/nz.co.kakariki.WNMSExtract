@@ -1,0 +1,1129 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract">
+            <Stats>
+                <TotalClasses>9</TotalClasses>
+                <ConcreteClasses>9</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>11</Ce>
+                <A>0</A>
+                <I>0.85</I>
+                <D>0.15</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.DataLogger
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.DataLogger$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.DataLogger$LogAppType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.WNMSDataExtractor
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.WNMSDataScheduler
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransform
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransformGUI
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransformGUI$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.WNMSTransformGUI$2
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.parser</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.schedule</Package>
+                <Package>com.jgoodies.forms.builder</Package>
+                <Package>com.jgoodies.forms.layout</Package>
+                <Package>org.apache.commons.cli</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.log4j.net</Package>
+                <Package>org.quartz</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+                <Package>com.alcatel_lucent.nz.wnmstest</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database">
+            <Stats>
+                <TotalClasses>20</TotalClasses>
+                <ConcreteClasses>18</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>13</Ca>
+                <Ce>2</Ce>
+                <A>0.1</A>
+                <I>0.13</I>
+                <D>0.77</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUJDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUTable
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUConnectionDefinitions
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUDBUtilities
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUDBUtilities$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUDBUtilities$ColumnStructure
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUJDCConnectorFactory
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ALUJDCConnectorFactory$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.ConnectionReaper
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.DatabaseType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.GTANZRSDBJDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.JDCConnection
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.JDCConnectionDriver
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.JDCConnectionPool
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.MPMJDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.NPO33JDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.NPO48JDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.NZRSDBJDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.TNZNZRSDBJDCConnector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.TestJDCConnector
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.inode</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.inodevcc</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.nodeb</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.rnccn</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.pcm</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.vcc</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.schedule</Package>
+                <Package>com.alcatel_lucent.nz.wnmstest</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.inode">
+            <Stats>
+                <TotalClasses>6</TotalClasses>
+                <ConcreteClasses>6</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUApTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUAtmPortTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUEthernetTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALUINodeTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALULpTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inode.ALURncEquipmentTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.inodevcc">
+            <Stats>
+                <TotalClasses>4</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>4</Ce>
+                <A>0</A>
+                <I>0.8</I>
+                <D>0.2</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALUAtmPortTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALUINodeTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALURncEquipmentTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.inodevcc.ALUVccTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.nodeb">
+            <Stats>
+                <TotalClasses>11</TotalClasses>
+                <ConcreteClasses>11</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUBoardTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUBtsCellTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUCcmTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUCemTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUHSDPAServiceTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUHSUPAServiceTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUImaGroupTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUIpRanTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUNodeBEquipmentTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUPATable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.nodeb.ALUPassiveComponentTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.rnccn">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.rnccn.ALUNeighbouringRncTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.rnccn.ALURncFunctionTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.rnccn.ALUUtranCellTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts.SNAPBTSEquipmentTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts.SNAPFddBtsTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb.SNAPRncNodeBTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb.SNAPRncTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.wips.pcm">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.pcm.SNAPNodeBPCMTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.database.wips.vcc">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.83</I>
+                <D>0.17</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.vcc.SNAPAtmIfTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.vcc.SNAPRncTable
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.database.wips.vcc.SNAPRncVccTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.apache.xmlbeans.impl.values</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.document">
+            <Stats>
+                <TotalClasses>17</TotalClasses>
+                <ConcreteClasses>16</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>4</Ca>
+                <Ce>21</Ce>
+                <A>0.06</A>
+                <I>0.84</I>
+                <D>0.1</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUDocument
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUDocumentFactory
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUDocumentFactory$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.ALUFileFilter
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.DocumentType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.NetworkType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.ReaderType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.TransformerType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSCountNodeBPCMDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapFddBtsDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapRANNetworkTransformer
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapRncNodeBDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WIPSMapRncVccDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSINodeDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSINodeVccDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSNodeBDocument
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.document.WNMSRncCnDocument
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.inode</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.inodevcc</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.nodeb</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.rnccn</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.pcm</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database.wips.vcc</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.parser</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.apache.xmlbeans</Package>
+                <Package>org.xml.sax</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.schedule</Package>
+                <Package>com.alcatel_lucent.nz.wnmstest</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.parser">
+            <Stats>
+                <TotalClasses>9</TotalClasses>
+                <ConcreteClasses>8</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>3</Ca>
+                <Ce>2</Ce>
+                <A>0.11</A>
+                <I>0.4</I>
+                <D>0.49</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParser
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParserFactory
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParserFactory$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.ALUParserFactory$PType
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.BORGParser
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.BORGParser$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.WIPSParser
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.WNMSParser
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.parser.WNMSParser$1
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.w3c.dom</Package>
+                <Package>org.xml.sax</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+                <Package>com.alcatel_lucent.nz.wnmstest</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.reader">
+            <Stats>
+                <TotalClasses>28</TotalClasses>
+                <ConcreteClasses>25</ConcreteClasses>
+                <AbstractClasses>3</AbstractClasses>
+                <Ca>3</Ca>
+                <Ce>19</Ce>
+                <A>0.11</A>
+                <I>0.86</I>
+                <D>0.03</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.FileSelector
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.HttpReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.LogWriter
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader$AppProc
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgBlockReader$RncAp
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader$AppProc
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgReader$RncAp
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.BorgSelectionReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.CSVReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.CSVReader$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.Extractor
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.Extractor$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorCPV
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorGTAZIP
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorTAR
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorTNZCPV
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.ExtractorTNZTAR
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.FileProcessor
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.FileUtilities
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.GTAHttpReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.SSLReaderUtilities
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.SSLReaderUtilities$1
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.TNZArchiveReader
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.reader.TNZArchiveReader$1
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+                <Package>org.apache.commons.compress.archivers.tar</Package>
+                <Package>org.apache.commons.compress.archivers.zip</Package>
+                <Package>org.apache.commons.compress.compressors.gzip</Package>
+                <Package>org.apache.commons.csv</Package>
+                <Package>org.apache.commons.io</Package>
+                <Package>org.apache.http</Package>
+                <Package>org.apache.http.auth</Package>
+                <Package>org.apache.http.client</Package>
+                <Package>org.apache.http.client.methods</Package>
+                <Package>org.apache.http.conn</Package>
+                <Package>org.apache.http.impl.client</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.htmlparser</Package>
+                <Package>org.htmlparser.filters</Package>
+                <Package>org.htmlparser.tags</Package>
+                <Package>org.htmlparser.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.schedule</Package>
+                <Package>com.alcatel_lucent.nz.wnmstest</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.schedule">
+            <Stats>
+                <TotalClasses>8</TotalClasses>
+                <ConcreteClasses>8</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>6</Ce>
+                <A>0</A>
+                <I>0.86</I>
+                <D>0.14</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConfigPoller
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConfigProperties
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConfigProperties$Prefix
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionJob
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionJobFactory
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionJobScheduler
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ConversionListener
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmsextract.schedule.ExecutableJob
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+                <Package>org.apache.log4j</Package>
+                <Package>org.quartz</Package>
+                <Package>org.quartz.impl</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.fddbts">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.nodeb">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.pcm">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wips.vcc">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inode">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.inodevcc">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.nodeb">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmsextract.xmlbeans.wnms.rnccn">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.alcatel_lucent.nz.wnmstest">
+            <Stats>
+                <TotalClasses>18</TotalClasses>
+                <ConcreteClasses>18</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>8</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestCopyINode
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestCopyNodeB
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestCopyRncCn
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestDBUtilities
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestFileProcess_Extract
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestFileUtilities_Extract
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestFileUtilities_Select
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseCountNodeBPCM
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseINode
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseMapFddBts
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseMapRncNodeB
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseMapRncVcc
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseNodeB
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestParseRncCn
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestSecureConnect
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestStandaloneXSLParse
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.TestSuiteParse
+                </Class>
+                <Class sourceFile="Unknown">
+                    com.alcatel_lucent.nz.wnmstest.Test_StandaloneXSLParse
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.database</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.document</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.parser</Package>
+                <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+                <Package>junit.framework</Package>
+                <Package>junit.textui</Package>
+                <Package>org.apache.log4j</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.jgoodies.forms.builder">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.jgoodies.forms.layout">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="junit.framework">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="junit.textui">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.commons.cli">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.commons.compress.archivers.tar">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.commons.compress.archivers.zip">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.commons.compress.compressors.gzip">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.commons.csv">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.commons.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.http">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.http.auth">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.http.client">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.http.client.methods">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.http.conn">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.http.impl.client">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.log4j">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.log4j.net">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.xmlbeans">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.xmlbeans.impl.values">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.htmlparser">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.htmlparser.filters">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.htmlparser.tags">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.htmlparser.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.quartz">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.quartz.impl">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.w3c.dom">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.xml.sax">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+        <Package Name="com.alcatel_lucent.nz.wnmsextract">
+            <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+            <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+        </Package>
+
+        <Package Name="com.alcatel_lucent.nz.wnmsextract.reader">
+            <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+            <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+        </Package>
+
+        <Package Name="com.alcatel_lucent.nz.wnmsextract.schedule">
+            <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+            <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+            <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+        </Package>
+
+        <Package Name="com.alcatel_lucent.nz.wnmstest">
+            <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+            <Package>com.alcatel_lucent.nz.wnmsextract</Package>
+            <Package>com.alcatel_lucent.nz.wnmsextract.reader</Package>
+        </Package>
+
+    </Cycles>
+</JDepend>

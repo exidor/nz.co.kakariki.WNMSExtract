@@ -1,0 +1,14 @@
+com.alcatel_lucent.nz.wnmsextract
+com.alcatel_lucent.nz.wnmsextract.database
+com.alcatel_lucent.nz.wnmsextract.database.inode
+com.alcatel_lucent.nz.wnmsextract.database.inodevcc
+com.alcatel_lucent.nz.wnmsextract.database.nodeb
+com.alcatel_lucent.nz.wnmsextract.database.rnccn
+com.alcatel_lucent.nz.wnmsextract.database.wips.fddbts
+com.alcatel_lucent.nz.wnmsextract.database.wips.nodeb
+com.alcatel_lucent.nz.wnmsextract.database.wips.pcm
+com.alcatel_lucent.nz.wnmsextract.database.wips.vcc
+com.alcatel_lucent.nz.wnmsextract.document
+com.alcatel_lucent.nz.wnmsextract.parser
+com.alcatel_lucent.nz.wnmsextract.reader
+com.alcatel_lucent.nz.wnmsextract.schedule

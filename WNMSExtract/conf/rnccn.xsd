@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ * This file is part of wnmsextract.
+ * 
+ * wnmsextract is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * wnmsextract is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   RncCn Schema for wnmsextract.nz.alcatel-lucent.com
+   Copyright 2010 Alcatel-Lucent All rights reserved.
+  </xs:documentation>
+	</xs:annotation>
+	<!-- 
+++ 
+-->
+	<xs:element name="RncCn" type="RncCnType"/>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="RncCnType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="timestamp" type="xs:string"/>
+			<xs:element name="RncFunction" type="RncFunctionType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="RncFunctionType">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element name="VS.NumberOfRabEstablished.GrantedRabCSSpeechConv.Avg" type="xs:float"/>
+				<xs:element name="VS.NumberOfRabEstablished.GrantedRabCsConv64.Avg" type="xs:float"/>
+				<xs:element name="VS.NumberOfRabEstablished.GrantedRabCsStr.Avg" type="xs:integer"/>
+				<xs:element name="VS.NumberOfRabEstablished.GrantedRabCSSpeechConv.Max" type="xs:integer"/>
+				<xs:element name="VS.NumberOfRabEstablished.GrantedRabCsConv64.Max" type="xs:integer"/>
+				<xs:element name="VS.NumberOfRabEstablished.GrantedRabCsStr.Max" type="xs:integer"/>
+				<xs:element name="VS.ReceivedPagingRequest.WithCoreNetworkCs" type="xs:integer"/>
+				<xs:element name="VS.ReceivedPagingRequest.WithCoreNetworkPs" type="xs:integer"/>
+				<xs:element name="VS.ReceivedPagingRequest.FromCoreNwCsInvalidLac" type="xs:integer"/>
+				<xs:element name="VS.ReceivedPagingRequest.WithCoreNwPsInvalidRac" type="xs:integer"/>
+			</xs:sequence>
+			<xs:element name="UtranCell" type="UtranCellType" maxOccurs="unbounded"/>
+			<xs:element name="NeighbouringRnc" type="NeighbouringRncType" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="UtranCellType">
+		<xs:sequence>
+			<xs:element name="RAB.AttEstab.CS.SpeechConv" type="xs:decimal"/>
+			<xs:element name="RAB.AttEstab.PS.TrChn.DCH_HSDSCH" type="xs:decimal"/>
+			<xs:element name="RAB.AttEstab.PS.TrChn.EDCH_HSDSCH" type="xs:decimal"/>
+			<xs:element name="RAB.SuccEstab.CS.SpeechConv" type="xs:decimal"/>
+			<xs:element name="RAB.SuccEstab.PS.TrChn.DCH_HSDSCH" type="xs:decimal"/>
+			<xs:element name="RAB.SuccEstab.PS.TrChn.EDCH_HSDSCH" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.CallReestab" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.Detach" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.Emergency" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.IRATCCO" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.IRATCellResel" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigBgrdCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigConvCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigHighPrioSig" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigIntactCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigLowPrioSig" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigStrmCal" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.OrigSubscCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.Registration" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.Spare12" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermBgrdCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermConvCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermHighPrioSig" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermIntactCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermLowPrioSig" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermStrmCall" type="xs:decimal"/>
+			<xs:element name="RRC.AttConnEstab.TermUnknown" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.Emergency" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.OrigBgrdCall" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.OrigConvCall" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.OrigIntactCall" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.TermBgrdCall" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.TermConvCall" type="xs:decimal"/>
+			<xs:element name="RRC.SuccConnEstab.TermIntactCall" type="xs:decimal"/>
+			<xs:element name="VS.CallEstablishmentDuration.Conversational.Cum" type="xs:decimal"/>
+			<xs:element name="VS.CallEstablishmentDuration.Conversational.NbEvt" type="xs:decimal"/>
+			<xs:element name="VS.CallEstablishmentDuration.Background.Cum" type="xs:decimal"/>
+			<xs:element name="VS.CallEstablishmentDuration.Interactive.Cum" type="xs:decimal"/>
+			<xs:element name="VS.CallEstablishmentDuration.Background.NbEvt" type="xs:decimal"/>
+			<xs:element name="VS.CallEstablishmentDuration.Interactive.NbEvt" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm10p2" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm12p2" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm4p75" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm5p15" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm5p9" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm6p7" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm7p4" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrABtGoodFrm.AmrRtChgLnkFrm7p95" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrWbABtBadFrm.AmrWbRt1265" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrWbABtBadFrm.AmrWbRt660" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrWbABtBadFrm.AmrWbRt885" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrWbABtGoodFrm.AmrWbRt1265" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrWbABtGoodFrm.AmrWbRt660" type="xs:decimal"/>
+			<xs:element name="VS.DdUlAmrWbABtGoodFrm.AmrWbRt885" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkActivityRlcRefCell.DlRabHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcActiveCells.DlRabCsSpeech" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabCsData64" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabCsSpeech" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabCsStr" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabOther" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb128" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb16" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb256" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb32" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb384" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb64" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsIb8" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsStr128" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsStr256" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsStr384" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedDownlinkKbytesRlcReferenceCell.DlRabPsStrOther" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedUplinkActivityRlcRefCell.UlRabPsIb16" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedUplinkKbytesRlcReferenceCell.UlRabHsupa" type="xs:decimal"/>
+			<xs:element name="VS.DedicatedUplinkKbytesRlcReferenceCell.UlRabPsIb128" type="xs:decimal"/>
+			<xs:element name="VS.DlAsConfIdAvgNbrEstablished.DlAsCnfCsData.Cum" type="xs:decimal"/>
+			<xs:element name="VS.DlAsConfIdAvgNbrEstablished.DlAsCnfCsData.NbEvt" type="xs:decimal"/>
+			<xs:element name="VS.DlAsConfIdAvgNbrEstablished.DlAsCnfCsSpeechNbLrAmr.Avg" type="xs:decimal"/>
+			<xs:element name="VS.DlAsConfIdAvgNbrEstablished.DlAsCnfCsSpeechNbLrAmr.Cum" type="xs:decimal"/>
+			<xs:element name="VS.DlAsConfIdAvgNbrEstablished.DlAsCnfCsSpeechWbAmr.Cum" type="xs:decimal"/>
+			<xs:element name="VS.DownsizingStep1Success.DchHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallToEdchCallInterFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallToEdchCallIntraFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallToNonEdchCallInterFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallToNonEdchCallIntraFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallTTI10ToEdchCallTTI2" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallTTI2ToEdchCallTTI10" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.EdchCallTTI2ToEdchCallTTI2" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.NonEdchCallToEdchCallInterFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchSucMobility.NonEdchCallToEdchCallIntraFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallToEdchCallInterFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallToEdchCallIntraFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallToNonEdchCallInterFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallToNonEdchCallIntraFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallTTI10ToEdchCallTTI2" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallTTI2ToEdchCallTTI10" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.EdchCallTTI2ToEdchCallTTI2" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.NonEdchCallToEdchCallInterFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.EdchUnsucMobility.NonEdchCallToEdchCallIntraFreqMob" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.Emergency" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.OrigBgrdCall" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.OrigConvCall" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.OrigIntactCall" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.TermBgrdCall" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.TermConvCall" type="xs:decimal"/>
+			<xs:element name="VS.FirstRrcConnectionRequest.TermIntactCall" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilitySuccess.HsdpaToHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilitySuccess.HsdpaToHsdpaInterFreq" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilitySuccess.HsdpaToNonHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilitySuccess.HsdpaToNonHsdpaInterFreq" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilitySuccess.NonHsdpaToHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilitySuccess.NonHsdpaToHsdpaInterFreq" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilityUnsuccessful.HsdpaToHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilityUnsuccessful.HsdpaToHsdpaInterFreq" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilityUnsuccessful.HsdpaToNonHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilityUnsuccessful.HsdpaToNonHsdpaInterFreq" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilityUnsuccessful.NonHsdpaToHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.HsdpaMobilityUnsuccessful.NonHsdpaToHsdpaInterFreq" type="xs:decimal"/>
+			<xs:element name="VS.IncomInterFreqHoAtt.Rescue" type="xs:decimal"/>
+			<xs:element name="VS.IncomInterFreqHoAtt.Service" type="xs:decimal"/>
+			<xs:element name="VS.IncomInterFreqHoSuc.Rescue" type="xs:decimal"/>
+			<xs:element name="VS.IncomInterFreqHoSuc.Service" type="xs:decimal"/>
+			<xs:element name="VS.IntraRncOutInterFreqHoAttempt.HoWithCmMeasInterBand" type="xs:decimal"/>
+			<xs:element name="VS.IntraRncOutInterFreqHoFail.HoWithCmMeasInterBand" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeDlCodesSF16RsrvHs.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.128.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.16.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.256.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.32.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.4.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.64.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IRMTimeFreeDlCodesBySpreadingFactor.8.Avg" type="xs:decimal"/>
+			<xs:element name="VS.IuAbnormalReleaseRequestCs.DlAsCnfCsSpeechNbLrAmr" type="xs:decimal"/>
+			<xs:element name="VS.IuAbnormalReleaseRequestCs.DlAsCnfCsSpeechWbAmr" type="xs:decimal"/>
+			<xs:element name="VS.IuAbnormalReleaseRequestPs.DlAsCnfHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.IuDlAmrFrmFqc.FrmBad" type="xs:decimal"/>
+			<xs:element name="VS.IuDlAmrFrmFqc.FrmBadRadio" type="xs:decimal"/>
+			<xs:element name="VS.IuDlAmrFrmFqc.FrmGood" type="xs:decimal"/>
+			<xs:element name="VS.IuDlAmrWbFrmFqc.FrmBad" type="xs:decimal"/>
+			<xs:element name="VS.IuDlAmrWbFrmFqc.FrmBadRadio" type="xs:decimal"/>
+			<xs:element name="VS.IuDlAmrWbFrmFqc.FrmGood" type="xs:decimal"/>
+			<xs:element name="VS.IuReleaseCompleteCs.DlAsCnfCsSpeechNbLrAmr" type="xs:decimal"/>
+			<xs:element name="VS.IuReleaseCompleteCs.DlAsCnfCsSpeechWbAmr" type="xs:decimal"/>
+			<xs:element name="VS.OutGoInterFreqHoAtt.Rescue" type="xs:decimal"/>
+			<xs:element name="VS.OutGoInterFreqHoAtt.Service" type="xs:decimal"/>
+			<xs:element name="VS.OutGoInterFreqHoSuc.Rescue" type="xs:decimal"/>
+			<xs:element name="VS.OutGoInterFreqHoSuc.Service" type="xs:decimal"/>
+			<xs:element name="VS.PagingCancelledRecords" type="xs:decimal"/>
+			<xs:element name="VS.PagingDelayedRecords" type="xs:decimal"/>
+			<xs:element name="VS.PagingMessagesSentOnPcch" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingBackgroundCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingCauseUnknown" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingConversationalCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingHighPrioritySignalling" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingInteractiveCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingLowPrioritySignalling" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledCs.TerminatingStreamingCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingBackgroundCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingCauseUnknown" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingConversationalCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingHighPrioritySignalling" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingInteractiveCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingLowPrioritySignalling" type="xs:decimal"/>
+			<xs:element name="VS.PagingRecordsUnscheduledPs.TerminatingStreamingCall" type="xs:decimal"/>
+			<xs:element name="VS.PagingRejectedRequests" type="xs:decimal"/>
+			<xs:element name="VS.RAB.Mean.CSV.Sum.Cum" type="xs:decimal"/>
+			<xs:element name="VS.RAB.SuccEstab.PS.ReqNotGranted.DCH_HSDSCH_GrantedDCH_DCH" type="xs:decimal"/>
+			<xs:element name="VS.RAB.SuccEstab.PS.ReqNotGranted.EDCH_HSDSCH_GrantedDCH_DCH" type="xs:decimal"/>
+			<xs:element name="VS.RAB.SuccEstab.PS.ReqNotGranted.EDCH_HSDSCH_GrantedDCH_HSDSCH" type="xs:decimal"/>
+			<xs:element name="VS.RadioBearerReleaseSuccess.SrcCallHsdpaEdch" type="xs:decimal"/>
+			<xs:element name="VS.RadioBearerReleaseSuccess.SrcCallHsdpaR99" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsData" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsDataPsDch" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsDataPsHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsSpeech" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsSpeechHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsSpeechPsDch" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsSpeechPsDchPsDch" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsSpeechPsDchPsHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.CsStr" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.Other" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.PsDchDlDchUl" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.PsDchPsDch" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.PsDchPsHsdpa" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.PsHsdpaDchUl" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.PsHsdpaDlDchEdchUl" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.PsHsdpaDlEdchUl" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupRequest.Sig" type="xs:decimal"/>
+			<xs:element name="VS.RadioLinkSetupUnsuccess.LackBwthIub" type="xs:decimal"/>
+			<xs:element name="VS.ReceivedPagingRequestType2CellDch.WithCoreNetworkCs" type="xs:decimal"/>
+			<xs:element name="VS.ReceivedPagingRequestType2CellDch.WithCoreNetworkPs" type="xs:decimal"/>
+			<xs:element name="VS.ReceivedPagingRequestType2CellFach.WithCoreNetworkCs" type="xs:decimal"/>
+			<xs:element name="VS.ReceivedPagingRequestType2CellFach.WithCoreNetworkPs" type="xs:decimal"/>
+			<xs:element name="VS.RrcActiveSetUpdateCompleteProcedure" type="xs:decimal"/>
+			<xs:element name="VS.RrcActiveSetUpdateUnsuccess.RrcActiveSetUpdateFailure" type="xs:decimal"/>
+			<xs:element name="VS.RrcActiveSetUpdateUnsuccess.Timeout" type="xs:decimal"/>
+			<xs:element name="VS.UplinkRssi.Cum" type="xs:decimal"/>
+			<xs:element name="VS.UplinkRssi.Max" type="xs:decimal"/>
+			<xs:element name="VS.UplinkRssi.NbEvt" type="xs:decimal"/>
+			<xs:element name="VS.UpsizingSuccess.DchHsdpa" type="xs:decimal"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<!-- 
+++ 
+-->
+	<xs:complexType name="NeighbouringRncType">
+		<xs:sequence>
+			<xs:element name="RAB.AttEstab.PS.TrChn.NeighbRnc.DCH_HSDSCH" type="xs:integer"/>
+			<xs:element name="RAB.AttEstab.PS.TrChn.NeighbRnc.EDCH_HSDSCH" type="xs:integer"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+</xs:schema>
